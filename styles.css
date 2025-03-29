@@ -1,0 +1,1383 @@
+/* Reset et Polices */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Helvetica, sans-serif;
+}
+
+/* Barre de Navigation */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #eef3f8;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    margin-left: 10px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-right a i {
+    font-size: 20px;
+}
+
+.premium {
+    color: #915907;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Bannière et Photo de Profil */
+.profile-header {
+    position: relative;
+    margin-top: 10px;
+}
+
+.banner {
+    height: 200px;
+    background: #0077b5; /* Couleur temporaire (remplacer par ton image) */
+    width: 100%;
+}
+
+.profile-pic {
+    position: absolute;
+    top: 150px;
+    left: 5%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: #ddd; /* Remplacer par ta photo */
+    background-size: cover;
+}
+
+/* Infos Profil */
+.profile-info {
+    margin-top: 70px;
+    padding: 0 5%;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact {
+    font-weight: bold;
+}
+
+hr {
+    margin: 15px 0;
+    border: 0.5px solid #eee;
+}
+
+/* Style du dropdown et de son déclencheur */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espace entre photo et texte */
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.dropdown-trigger:hover {
+    background-color: #f3f6f8;
+}
+
+/* Photo miniature */
+.profile-thumbnail {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Texte "Vous" */
+.dropdown-text {
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+}
+
+/* Menu déroulant */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Afficher le menu au hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Pour les fonctionnalités JS */
+.dropdown-content.show {
+    display: block;
+}
+
+.nav-right a.active {
+    color: #0a66c2;
+    border-bottom: 2px solid #0a66c2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-right {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+    }
+    .nav-right.show-mobile {
+        display: flex;
+    }
+}
+/* Style de l'icône LinkedIn */
+.logo i.fab.fa-linkedin {
+    font-size: 34px; /* Taille similaire au logo réel */
+    color: #0a66c2; /* Bleu LinkedIn */
+    margin-right: 8px;
+}
+
+/* Ajustement de l'alignement */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.messagerie-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+    gap: 2px;
+}
+
+.messagerie-icon {
+    width: 24px;
+    height: 24px;
+    color: #666; /* Couleur grise */
+}
+
+.messagerie-link:hover .messagerie-icon {
+    color: #0a66c2; /* Bleu LinkedIn au survol */
+}
+/* Conteneur principal du dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 52px; /* Hauteur fixe comme LinkedIn */
+    display: flex;
+    align-items: center;
+}
+
+/* Trigger du dropdown */
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px 5px 8px;
+    border-radius: 25px;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Effet hover comme LinkedIn */
+.dropdown-trigger:hover {
+    background-color: #ebebeb;
+}
+
+/* Photo miniature */
+.profile-thumbnail {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+}
+
+/* Supprimer la règle .dropdown:hover .dropdown-content */
+/* Et la remplacer par : */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Ajouter une classe pour la flèche tournée */
+.dropdown-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+/* Conserver les autres styles existants */
+.dropdown-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000e6;
+}
+
+.dropdown-arrow {
+    font-size: 12px;
+    color: #666;
+    transition: transform 0.2s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 8px 0;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+/* Styles pour la barre de navigation LinkedIn */
+.linkedin-navbar {
+    background-color: white;
+    height: 52px;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1128px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 16px;
+}
+
+.nav-logo {
+    margin-right: 8px;
+}
+
+
+
+.nav-search {
+    flex-grow: 1;
+    max-width: 280px;
+    position: relative;
+    margin-right: 8px;
+}
+
+.nav-search i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666666;
+}
+
+.nav-search input {
+    width: 100%;
+    padding: 8px 8px 8px 36px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    background-color: #eef3f8;
+    font-size: 14px;
+}
+
+.nav-search input:focus {
+    outline: none;
+    background-color: white;
+    border-color: #0a66c2;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 12px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    font-size: 12px;
+    min-width: 80px;
+    height: 100%;
+    text-decoration: none;
+    position: relative;
+    padding: 0 4px;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.nav-item span {
+    white-space: nowrap;
+}
+
+.nav-item.active {
+    color: #000000;
+}
+
+.nav-item.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #000000;
+}
+
+.user-avatar img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-menu, .business-menu {
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.user-menu span, .business-menu span {
+    display: flex;
+    align-items: center;
+}
+
+.user-menu i, .business-menu i {
+    font-size: 12px;
+    margin-left: 2px;
+    margin-top: 1px;
+}
+
+.nav-premium {
+    color: #915907;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+.nav-premium:hover {
+    text-decoration: underline;
+}
+
+/* Conteneur Principal */
+.profile-container {
+    display: flex;
+    max-width: 1128px;
+    margin: 20px auto;
+    gap: 24px;
+}
+
+/* Bloc A (75% de largeur) */
+.profile-block-a {
+    flex: 3;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+/* Bloc B (25% de largeur) */
+.profile-block-b {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+/* Conteneur principal élargi */
+.profile-header-container {
+    position: relative;
+    height: 250px; /* Augmenté de 200px à 250px */
+    overflow: visible; /* Changé de hidden à visible */
+    margin-bottom: 100px; /* Ajusté pour l'espacement */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Bannière redimensionnée */
+.banner-crop {
+    height: 300px; /* Augmenté de 150px à 200px */
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%; /* Changé de auto à 100% */
+    object-fit: cover;
+    display: block;
+    margin-top: auto;
+}
+
+/* Photo de profil - Version gauche complètement visible */
+.profile-picture-container {
+    position: absolute;
+    left: 30px;
+    bottom: -90px; /* Ajusté pour positionnement optimal */
+    width: 160px; /* Légèrement augmenté */
+    height: 160px;
+    z-index: 3;
+}
+
+.profile-picture-round {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid white; /* Bordure épaissie */
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Ombre plus prononcée */
+    display: block;
+}
+
+/* Suppression du margin-top négatif inutile */
+.banner-top-crop {
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-top-crop .banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+/* Structure Principale */
+.profile-block-a {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Section Contenu */
+.profile-main-content {
+    padding: 24px;
+    margin-top: 80px;
+}
+
+/* Section Vérification */
+.verification-section {
+    margin-bottom: 16px;
+}
+
+.verification-section h1 {
+    font-size: 28px;
+    color: #191919;
+    margin-bottom: 8px;
+}
+
+.verification-badge {
+    background: #f0f7ff;
+    color: #0a66c2;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.verification-badge:hover {
+    background: #e1f0ff;
+}
+
+/* Détails Profil */
+.profile-details {
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.profile-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.location, .connections {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Objectifs */
+.profile-goals {
+    margin-bottom: 24px;
+}
+
+.profile-goals h2 {
+    font-size: 18px;
+    color: #191919;
+    margin: 16px 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.goal-button {
+    background: #f3f6f8;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #191919;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.goal-button:hover {
+    background: #e8ebed;
+}
+
+.company-info {
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+    padding-left: 24px;
+}
+
+/* Opportunités */
+.opportunities-section {
+    margin-bottom: 24px;
+}
+
+.opportunities-text {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.opportunities-roles {
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.details-button {
+    background: none;
+    border: none;
+    color: #0a66c2;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Recrutement */
+.recruitment-section {
+    background: #f9fafb;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.primary-button {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.3s;
+}
+
+.primary-button:hover {
+    background: #004182;
+}
+.verification-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap; /* Pour le responsive */
+}
+
+.verification-section h1 {
+    font-size: 28px;
+    color: #191919;
+    margin: 0; /* Suppression de la marge par défaut */
+    line-height: 1.2;
+}
+
+.verification-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0f7ff;
+    color: #0a66c2;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    height: 32px; /* Hauteur fixe pour alignement */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+.verification-badge i {
+    font-size: 14px;
+}
+
+.verification-badge:hover {
+    background: #e1f0ff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+}
+.verification-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0f7ff;
+    color: #0a66c2;
+    border: 1px dashed #0a66c2; /* Contour pointillé bleu LinkedIn */
+    padding: 5px 12px; /* Ajustement pour compenser la bordure */
+    border-radius: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    height: 32px;
+    white-space: nowrap;
+    position: relative; /* Pour les effets hover */
+}
+
+/* Animation améliorée au survol */
+.verification-badge:hover {
+    background: #e1f0ff;
+    box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.2);
+    border-style: solid; /* Transforme en trait plein au survol */
+}
+
+/* Style de l'icône */
+.verification-badge i {
+    font-size: 14px;
+    color: #0a66c2;
+}
+
+/* Effet "pulse" optionnel */
+@keyframes pulse-dotted {
+    0% { border-color: #0a66c2; }
+    50% { border-color: rgba(10, 102, 194, 0.5); }
+    100% { border-color: #0a66c2; }
+}
+
+.verification-badge.pulse {
+    animation: pulse-dotted 2s infinite;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+/* Bouton actif (bleu LinkedIn) */
+.action-button.active {
+    background: #0a66c2;
+    color: white;
+    border: 1px solid #0a66c2;
+}
+
+/* Boutons inactifs (contour gris) */
+.action-button:not(.active) {
+    border: 1px solid #d1d1d1;
+    color: #666;
+}
+
+/* Effets hover */
+.action-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.action-button.active:hover {
+    background: #004182;
+}
+
+.action-button:not(.active):hover {
+    background: #f3f6f8;
+}
+.companies-section {
+    margin: 12px 0;
+}
+
+.company-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+}
+
+.company-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.company-name {
+    font-size: 14px;
+    color: #191919;
+}
+/* Conteneur principal invisible */
+.profile-main-content {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Colonne A1 + Colonne A2 */
+    gap: 20px;
+    align-items: start;
+}
+
+/* Bloc A1 (contenu principal) */
+.verification-section,
+.profile-details,
+.profile-actions {
+    grid-column: 1;
+}
+
+/* Bloc A2 (entreprises) */
+.companies-container {
+    grid-column: 2;
+    grid-row: 1 / span 2; /* S'aligne avec nom + détails */
+    margin-top: 0;
+    padding-top: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+/* Ajustements pour un rendu naturel */
+.company-item {
+    padding: 4px 0;
+}
+
+.company-logo {
+    width: 20px;
+    height: 20px;
+}
+
+.company-name {
+    font-size: 13px;
+}
+/* Nouveau CSS pour la disposition des blocs */
+.profile-container {
+    display: flex;
+    max-width: 1128px;
+    margin: 20px auto;
+    gap: 24px;
+    align-items: flex-start; /* Alignement en haut */
+}
+
+.profile-block-a {
+    flex: 3; /* Prend 3 parts de l'espace */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.profile-block-b {
+    flex: 1; /* Prend 1 part de l'espace */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+    padding: 16px; /* Ajout de padding pour le contenu */
+    position: sticky;
+    top: 80px; /* Pour rester visible lors du défilement */
+}
+
+/* Styles spécifiques pour le contenu du bloc B */
+.language-section, .url-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.language-section h3, .url-section h3 {
+    font-size: 16px;
+    color: #191919;
+    margin-bottom: 8px;
+}
+
+.language-section p, .url-section p {
+    font-size: 14px;
+    color: #666;
+}
+
+.stats-section {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-top: 20px;
+}
+/* Styles pour la nouvelle section */
+.opportunities-container {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.opportunities-section {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.recruitment-section {
+    flex: 1;
+    min-width: 250px;
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+}
+
+.opportunities-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #191919;
+}
+
+.opportunities-roles {
+    color: #666;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.details-button {
+    background: none;
+    border: none;
+    color: #0a66c2;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.details-button i {
+    font-size: 12px;
+    transition: transform 0.2s;
+}
+
+.edit-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-button:hover {
+    text-decoration: underline;
+}
+
+.recruitment-section p {
+    color: #666;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.primary-button {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.primary-button:hover {
+    background: #004182;
+}
+/* Styles pour la nouvelle section - Version alignée */
+.opportunities-container {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.opportunities-section, .recruitment-section {
+    flex: 1;
+    min-width: 250px;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    height: 100%; /* Hauteur égale */
+    display: flex;
+    flex-direction: column;
+}
+
+.opportunities-section {
+    background-color: #DDE7F1; /* Nouvelle couleur de fond */
+}
+
+.recruitment-section {
+    background: #f9fafb;
+}
+
+/* Contenu des sections */
+.section-content {
+    flex-grow: 1; /* Permet aux contenus de prendre l'espace disponible */
+}
+
+.opportunities-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #191919;
+}
+
+.opportunities-roles {
+    color: #666;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.details-button {
+    background: none;
+    border: none;
+    color: #0a66c2;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: auto; /* Aligne en bas */
+}
+
+/* Boutons et actions */
+.edit-button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: flex-end; /* Aligne à droite */
+    margin-bottom: 8px;
+}
+
+.recruitment-section p {
+    color: #666;
+    margin-bottom: 12px;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.primary-button {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: auto; /* Aligne en bas */
+    align-self: flex-start; /* Aligne à gauche */
+}
+/* Styles pour le bloc B */
+.profile-block-b {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+    padding: 16px;
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profile-section {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section-title {
+    font-size: 16px;
+    color: #191919;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.section-content {
+    font-size: 14px;
+    color: #666;
+}
+
+.ad-section {
+    background: #f3f6f8;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.ad-text {
+    font-size: 14px;
+    color: #191919;
+    font-style: italic;
+}
+
+.jobs-section {
+    background: #f9fafb;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.jobs-title {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.jobs-text {
+    font-size: 14px;
+    color: #191919;
+    margin-bottom: 12px;
+}
+
+.jobs-button {
+    background: #0a66c2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.viewed-pages-section {
+    margin-top: 8px;
+}
+
+.private-badge {
+    background: #f3f6f8;
+    color: #666;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.viewed-profile {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.viewed-profile-pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.viewed-profile-info {
+    flex: 1;
+}
+
+.viewed-profile-info h4 {
+    font-size: 14px;
+    color: #191919;
+    margin-bottom: 2px;
+}
+
+.connection-level {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.profile-title {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.message-button {
+    background: white;
+    color: #0a66c2;
+    border: 1px solid #0a66c2;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.unlock-button {
+    background: none;
+    border: none;
+    color: #0a66c2;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 0;
+    width: 100%;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.premium-text {
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0;
+}
+
+.premium-button {
+    background: #ffd700;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.trial-text {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+/* Styles pour la nouvelle section */
+.suggestions-container {
+    margin-top: 24px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+    padding: 16px;
+}
+
+.dual-blocks-container {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.opportunity-block, .recruitment-block {
+    flex: 1;
+    padding: 16px;
+    border-radius: 8px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opportunity-block {
+    background-color: #DDE7F1;
+    border: 1px solid #C7D5E3;
+}
+
+.recruitment-block {
+    background-color: #F3F6F8;
+    border: 1px solid #E0E0E0;
+}
+
+.opportunity-title, .recruitment-text {
+    font-weight: 600;
+    color: #191919;
+    margin-bottom: 8px;
+}
+
+.opportunity-roles {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+
+.show-details-btn {
+    background: none;
+    border: none;
+    color: #0A66C2;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.start-button, .confirm-button, .add-project-button {
+    background: #0A66C2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* Styles pour les suggestions personnalisées */
+.personalized-suggestions {
+    border-top: 1px solid #E0E0E0;
+    padding-top: 16px;
+}
+
+.suggestions-title {
+    font-size: 16px;
+    color: #191919;
+    margin-bottom: 16px;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.private-checkbox {
+    accent-color: #0A66C2;
+}
+
+.update-current-job, .github-projects {
+    background: #F9FAFB;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.update-text, .github-text {
+    color: #191919;
+    margin-bottom: 4px;
+}
+
+.update-subtext, .github-subtext {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.main-nav {
+    position: fixed; /* Rend la navbar fixe */
+    top: 0;          /* Positionne en haut de l'écran */
+    left: 0;         /* S'aligne à gauche */
+    right: 0;        /* S'étend sur toute la largeur */
+    z-index: 1000;   /* Garantit que la navbar reste au-dessus des autres éléments */
+    width: 100%;     /* Prend toute la largeur */
+    /* Vos styles existants... */
+}
